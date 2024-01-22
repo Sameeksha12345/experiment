@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style (1).css">
+	<title>measurement of wavelength</title>
+   <style>
+#image1{
+    width: 700px;
+    position: absolute;
+    margin-top: -40px;
+}
+.bog{
+    margin-top: -20px;
+}
+#image2{
+    position: absolute;
+    margin: 40px;
+    height: 200px;
+}
+#image3{
+  /* margin-left: 130px;*/
+  
+ position: absolute;
+height: 150px;
+margin-top: 80px;
+margin-left: 140px;
+}
+#image4{
+    height: 150px;
+margin-top: 80px;
+margin-left: 587px;
+   /* position: absolute;*/
+position: static;
+position: absolute;
+
+}
+#image5{
+  position: absolute;
+  height: 150px;
+margin-top: 80px;
+margin-left: 220px;
+width: 100px;
+}
+   </style>
+</head>
+<body>
+    <div class="vlabs">
+       <h2 id="measurement-of-the-wavelength-of-monochromatic-source-of-light-with-the-help-of-fresnels-bi-prism">Measurement of the wavelength of monochromatic source of light with the help of Fresnel’s Bi prism</h2>
+       </div>
+
+       <div class="block">
+        <h2 class="bold">Fresnel’s Bi-Prism Experiment</h2>
+        <div class="box" id="bg2">
+            <img id="image1"  src="download1.png" style="display: none;">
+            <img id="image2"  src="fig1.png" style="display: none;">
+            <img id="image3"  src="fig2.png" style="display: none;">
+            <img id="image4"  src="fig3.png" style="display: none;">
+            <img id="image5"  src="fig4.png" style="display: none;">
+
+
+        
+
+
+            
+            <div class="boxes bog" id="bg1">
+                <img id="my-image" id="bg2" src="download3.png" style="display: none;">
+                <div class="button-container">
+             
+
+                     <button class="button" id="margin" onclick="startSimulator()">turn on</button>
+                     
+                  
+                        
+                         
+         <button class="button" id="margin1" onclick="stopSimulator()">turn off</button>
+                 </div>
+                 <div class="button-container">
+                  
+                   
+                 
+                   
+                    
+                    <button class="button" id="bg2" onclick="toggleImage('image1')">optical bench</button>
+                   
+                    <button class="button" id="margin" onclick="toggleImage('image2')">light source</button>
+                 </div>
+                 <div class="button-container">
+                    <button class="button" id="margin" onclick="toggleImage('image3')">bi-prism</button>
+                   
+                 <button class="button unique" id="margin" onclick="toggleImage('image4')">eyepiece</button>
+                 </div>
+                 <div class="button-container">
+                    <button class="button" id="margin" onclick="toggleImage('image5')">place lens</button>
+                    <button class="button bracket" id="margin">+</button>
+                    <button class="button bracket" id="margin">-</button>
+                 </div>
+                 <div class="button-container">
+                    <button class="button bracket1" id="margin" onclick="resetSimulator()">Reset</button>
+                    </div>
+                    <br><br>
+            <div class="box2" id="ww">
+               <h2 class="color">message</h2>
+             </div> 
+           
+            </div>
+           
+        </div>
+            
+        
+    </div>
+      <div class="bd">
+        <h2 class="bold">Table :: Calculate the mean wavelength of Light Source</h2>
+      </div>   
+      
+      
+        <div>
+            <table style="margin: auto;border: none;">
+                <tbody><tr style="border: none">
+                    <td style="border: none">
+                        <h6 class="width"> Use this formula to calculate the distance b/w two virtual sources (2d),</h6>
+                    </td>
+                    <td style="border: none;">
+                        <h6><img src="fig1.jpg">
+                        </h6>
+                    </td>
+                    <td style="border: none">
+                        <div style="border-left: 5px solid black; height: 40px;"></div>
+                    </td>
+                    <td style="border: none">
+                        <h6 class="width"> Use this formula to calculate the wavelength of the light (λ),</h6>
+                    </td>
+                    <td style="border: none;">
+                        <h6><img src="fig1.jpg">
+                        </h6>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+        <table width="100%" style="border: 2px solid gray; border-collapse: collapse;">
+            
+                <tr>
+                    <th>S. No.</th>
+                    <th>Fringe width(ω in cm)</th>
+                    <th>Distance B/W two virtual source(2d in cm)</th>
+                    <th>Distance B/W slit and eyepiece(D in cm)</th>
+                    <th>Wavelength(λ in cm)</th>
+                </tr>
+            
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text" id="fw1"></td>
+                    <td><input type="text" id="2d1"></td>
+                    <td><input type="number" id="D1"></td>
+                    <td id="wl1"></td>
+                    
+                </tr>
+                
+                <tr>
+                    <th scope="row">2</th>
+                    <td><input type="text" id="fw2"></td>
+                    <td><input type="text" id="2d2"></td>
+                    <td><input type="number" id="D2"></td>
+                    <td id="wl2"></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><input type="text" id="fw3"></td>
+                    <td><input type="text" id="2d3"></td>
+                    <td><input type="number" id="D3"></td>
+                    <td id="wl3"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><input type="text" id="fw4"></td>
+                    <td><input type="text" id="2d4"></td>
+                    <td><input type="number" id="D4"></td>
+                    <td id="wl4"></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td><input type="text" id="fw5"></td>
+                    <td><input type="text" id="2d5"></td>
+                    <td><input type="number" id="D5"></td>
+                    <td id="wl5"></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight: bold;">Mean wavelength=<span id="meanwl"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table style="width: 100%; margin: auto;border: none;">
+  <tbody><tr style="border: none">
+  <td style="border: none; align-items: center;">
+   <a style="background-color: rgb(94, 0, 0); border-radius:3px;width: 50px; margin: 200px 0px 0px 400px;
+       height: 30px; color:white;cursor: pointer;font-size: 20px;padding:5px 10px 5px 10px;" onclick="calcwl()">Calculate(λ) </a>
+ <a style="background-color: rgb(94, 0, 0); border-radius:3px;width: 50px; margin: 200px 0px 0px 20px;
+height: 30px; color:white;cursor: pointer;font-size: 20px;padding:5px 10px 5px 10px;" onclick="verifywl()">% Error(in λ)</a>
+                </td>
+                <td style="border: none;">
+                    <p id="verify"></p>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+
+
+
+
+
+<script>
+   /*  const showImageButton = document.getElementById("showImageBtn");
+      const myImage = document.getElementById("hiddenImage"); 
+      showImageButton.addEventListener("click", () => { 
+         myImage.style.display = "block"; 
+         document.querySelector('.fixed-border').style.minHeight = hiddenImage.offsetHeight + 'px';
+      });*/
+
+
+   /*   document.getElementById('showImageBtn').addEventListener('click', function() {
+  const hiddenImage = document.getElementById('hiddenImage');
+  hiddenImage.style.display = 'block';
+  hiddenImage.onload = function() {
+    document.querySelector('.fixed-border').style.minHeight = hiddenImage.offsetHeight + 'px';
+  };
+});*/
+
+function toggleImage(imageId) {
+    // Toggle the display of the clicked image
+    var imageElement = document.getElementById(imageId);
+    if (imageElement.style.display === 'block') {
+      imageElement.style.display = 'none';
+    } else {
+      // Hide all images
+      document.getElementById('image1').style.display = 'none';
+      
+      
+      // Display the clicked image
+     if (imageElement.style.display = 'block'){
+      
+    }
+}
+
+
+
+
+  }
+  function toggleImage(imageId) {
+    // Toggle the display of the clicked image
+    var imageElement = document.getElementById(imageId);
+    if (imageElement.style.display === 'block') {
+      imageElement.style.display = 'none';
+    } else {
+      // Hide all images
+      document.getElementById('image2').style.display = 'none';
+      
+      
+      // Display the clicked image
+     if (imageElement.style.display = 'block'){
+
+      
+    }
+}
+
+
+
+  }
+  function toggleImage(imageId) {
+    // Toggle the display of the clicked image
+    var imageElement = document.getElementById(imageId);
+    if (imageElement.style.display === 'block') {
+      imageElement.style.display = 'none';
+
+    } else {
+      // Hide all images
+      document.getElementById('image3').style.display = 'none';
+      
+      
+      // Display the clicked image
+     if (imageElement.style.display = 'block'){
+
+      
+    }
+}
+
+
+
+  } 
+  function toggleImage(imageId) {
+    var box2 = document.getElementById("ww");
+
+
+   
+
+
+
+
+
+
+
+   
+
+
+   // Toggle the display of the clicked image
+   var imageElement = document.getElementById(imageId);
+ 
+
+
+   //if (imageElement.style.display === 'block') {
+
+    // imageElement.style.display = 'none';
+
+  // } else {
+     // Hide all images
+ 
+   //  document.getElementById('image4').style.display = 'none';
+   
+     
+     // Display the clicked image
+    if (imageElement.style.display = 'block'){
+ // Set the distance information based on the clicked image
+ var distanceText = '';
+     switch (imageId) {
+       case 'image4':
+         document.getElementById('ww').innerHTML= "Distance between slit and eyepiece for Optical Bench is 0.23";
+         break;
+     }
+   }else{
+     // If the image is already displayed, hide it
+     imageElement.style.display = 'none';
+     //distanceElement.innerHTML = ''; // Clear the distance information
+   }
+ }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+function toggleImage(imageId) {
+    // Toggle the display of the clicked image
+    var imageElement = document.getElementById(imageId);
+    if (imageElement.style.display === 'block') {
+      imageElement.style.display = 'none';
+
+    } else {
+      // Hide all images
+      document.getElementById('image5').style.display = 'none';
+      
+      
+      // Display the clicked image
+     if (imageElement.style.display = 'block'){
+
+      
+    }
+}
+
+
+
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  function startSimulator() {
+    // Get the message box element
+    var box2 = document.getElementById("ww");
+
+
+   
+
+
+
+
+
+
+
+    // Update the content of the message box
+    box2.innerHTML = "Simulator started!<br>";
+  }
+
+  // Event listener for the button click
+  document.getElementById("margin").addEventListener("click", startSimulator);
+
+
+  function stopSimulator() {
+    // Get the message box element
+    var box2 = document.getElementById("ww");
+
+    // Update the content of the message box
+    box2.innerHTML = "Simulator stoped!<br>";
+  }
+
+  // Event listener for the button click
+  document.getElementById("margin1").addEventListener("click", stopSimulator);
+
+  function resetSimulator() {
+            // Clear the content of the 'ww' div and hide all images
+           // document.getElementById('ww').innerHTML = '';
+            document.getElementById('image1').style.display = 'none';
+            document.getElementById('image2').style.display = 'none';
+            document.getElementById('image3').style.display = 'none';
+            document.getElementById('image4').style.display = 'none';
+            document.getElementById('image5').style.display = 'none';
+        }
+ 
+</script>
+
+
+               
+
+       
+   
+</body>
+</html>
+
